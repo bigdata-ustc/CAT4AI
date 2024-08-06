@@ -10,14 +10,18 @@ This Python library offers a streamlined solution for rapidly developing an Adap
 In evaluating human abilities, psychometrics gradually replaced traditional paper-and-pencil testing with a more advanced approach—-adaptive testing. This approach employs an understanding of cognitive functions and processes to guide the design of assessments, including the measurement of human knowledge, abilities, attitudes, and personality traits. By capturing the characteristics and utility (e.g., difficulty, discrimination) of different items and adjusting the test items in real-time based on the test-taker's performance, adaptive testing avoids overwhelming them with numerous items all at once. Adaptive testing has been widely applied in high-stakes exams such as the Graduate Management Admission Test (GMAT), Graduate Record Examinations (GRE), and the Scholastic Assessment Test (SAT).
 
 
-![Figure 1](./figs/cat_frame.png)
-
+<!-- ![Figure 1](./figs/cat_frame.png) -->
+<div style="text-align:center;">
+    <img src="./figs/cat_frame.png" style="width:90%;">
+</div>
 
 
 The adaptive system is split into two main components that take turns: At each test step, the psychometric model, as the user model, first uses the model's previous responses to estimate their current ability. Then, the selection algorithm picks the next item from the benchmark according to certain criteria. This two-step process repeats until a predefined stopping rule is met, and the final estimated ability of individual models will be fed back to themselves as the outcome of this assessment or for facilitating future training.
 
-
-![Figure 2](./figs/cat_implement.png)
+<div style="text-align:center;">
+    <img src="./figs/cat_implement.png" style="width:50%;">
+</div>
+<!-- ![Figure 2](./figs/cat_implement.png) -->
 
 
 
