@@ -42,6 +42,7 @@ This repository implements the basic functionalities of adaptive testing. It inc
 
 ## Installation
 
+
 Git and install by `pip`
 
 ```
@@ -51,6 +52,36 @@ pip install -e .
 ## Quick Start
 
 See the examples in `scripts` directory.
+
+
+### Data Preparation
+
+For instance, using the GSM8K benchmark from HELM ([HELM](https://crfm.stanford.edu/helm/classic/latest/)), download the response data for each LLM (Full JSON) and place it in the `data/raw_data` directory.
+
+### Data Processing
+
+To process the data, run the following notebook:
+
+```
+scripts/dataset/gsm8k.ipynb
+```
+
+### Psychometric Model Training (Item Feature Estimation)
+
+Train the psychometric model by running:
+
+```
+scripts/dataset/train.ipynb
+```
+
+### Adaptive Testing
+
+For adaptive testing, execute:
+
+```
+scripts/dataset/test.ipynb
+```
+
 
 ## utils
 
@@ -67,9 +98,9 @@ to see the visualization result.
 
 ## Data in the Paper
 
-All raw data mentioned in the paper can be found in the `data/` directory, which includes:
+All raw data mentioned in the paper can be found in the `data/experiments` directory, which includes:
 
-- `MedQA_irt_feature.json`: Estimated IRT features of each item in the MedQA dataset (Figure 2).
+- `GSM8K_irt_feature.json`, `MedQA_irt_feature.json`: Estimated IRT features of each item in the GSM8K and MedQA dataset (Figure 2).
 - `guess/`: Guessing factors data for contaminated and uncontaminated items across three benchmarks (MATH, NarrativeQA, RAFT) (Figure 3). Here, 0 indicates no contamination, and 1 indicates contamination.
 - `consistency.json`: Rankings consistency data with Full Benchmark.
 - `similarity/`: The average Jaccard similarity coefficient data of the selected items for each LLM on the MATH benchmark. The number of selected items increases from 10% to 80% of the entire benchmark.
