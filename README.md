@@ -100,7 +100,7 @@ to see the visualization result.
 
 All raw data mentioned in the paper can be found in the `data/experiments` directory, which includes:
 
-- `GSM8K_irt_feature.json`, `MedQA_irt_feature.json`: Estimated IRT features of each item in the GSM8K and MedQA dataset (Figure 2).
+- `GSM8K_irt_feature.json`, `MedQA_irt_feature.json`: Estimated IRT features of each item in the GSM8K and MedQA dataset (Figure 2,9,10).
 - `guess/`: Guessing factors data for contaminated and uncontaminated items across three benchmarks (MATH, NarrativeQA, RAFT) (Figure 3). Here, 0 indicates no contamination, and 1 indicates contamination.
 - `consistency.json`: Rankings consistency data with Full Benchmark.
 - `similarity/`: The average Jaccard similarity coefficient data of the selected items for each LLM on the MATH benchmark. The number of selected items increases from 10% to 80% of the entire benchmark.
